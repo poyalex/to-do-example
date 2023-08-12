@@ -81,7 +81,7 @@ export default function App(){
             setTodos(foundTodos.reverse())
             const responseTwo = await fetch('/api/todos/completed')
             const foundCompletedTodos = await responseTwo.json()
-            setCompletedTodos(foundCompletedTodos.reverse())
+            if (foundCompletedTodos.length > 0) setCompletedTodos(foundCompletedTodos.reverse())
         } catch(error){
             console.error(error)
         }

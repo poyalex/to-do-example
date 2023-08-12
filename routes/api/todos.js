@@ -6,7 +6,7 @@ const todoCtrl = require('../../controllers/api/todos')
 router.get('/', todoCtrl.indexNotComplete, todoCtrl.jsonTodos)
 
 //Index Complete
-router.get('/', todoCtrl.indexComplete, todoCtrl.jsonTodos)
+router.get('/completed', todoCtrl.indexComplete, todoCtrl.jsonTodos)
 
 //Delete
 router.delete('/:id', todoCtrl.destroy, todoCtrl.jsonTodo)

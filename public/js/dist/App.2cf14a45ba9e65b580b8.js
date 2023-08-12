@@ -119,7 +119,7 @@ function App() {
         setTodos(foundTodos.reverse());
         const responseTwo = yield fetch('/api/todos/completed');
         const foundCompletedTodos = yield responseTwo.json();
-        setCompletedTodos(foundCompletedTodos.reverse());
+        if (foundCompletedTodos.length > 0) setCompletedTodos(foundCompletedTodos.reverse());
       } catch (error) {
         console.error(error);
       }
@@ -620,4 +620,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.9c340037f19d2b66d0c88ffd36130994.js.map
+//# sourceMappingURL=App.c29eee36630040fca616b64378106741.js.map
